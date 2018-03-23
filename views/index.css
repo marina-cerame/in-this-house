@@ -1,4 +1,8 @@
 .outer {
   padding-top: 50px;
-  padding-left: 50px;
+  min-width: 750px;
+}
+
+body {
+  font-size: 2vmax;
 }
