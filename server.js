@@ -3,6 +3,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const helper = require('./helpers/prepareHouseText.js');
+
 const PORT = process.env.PORT || 3000;
 const app = express();
 
@@ -31,8 +33,10 @@ app.get('/andappreciate', (req, res) => {
 
 app.get('/:houseText', (req, res) => {
   try {
+    const text = helper.prepareText(req.params.houseText);
+    console.log(text);
     console.log('REQUEST FOR HOUSE: ' + req.params.houseText);
-    res.render('index', { houseText: req.params.houseText });
+    res.render('index', { houseText: req.params.houseText, text: text });
     // res.sendFile('index.html', { root: __dirname + "/public" });
   } catch (error) {
     console.log(error);
