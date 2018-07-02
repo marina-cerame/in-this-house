@@ -6,3 +6,7 @@
 body {
   font-size: 2vmax;
 }
+
+form {
+  margin-bottom: 0.5em;
+}
