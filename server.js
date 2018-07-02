@@ -39,6 +39,16 @@ app.get('/:houseText', (req, res) => {
   }
 });
 
+app.get('/assets/:filePath', (req, res) => {
+  try {
+    res.sendFile(__dirname + '/views/' + req.params.filePath);
+  } catch (error) {
+    console.log(error);
+    res.statusCode = 501;
+    res.end('Whoops! We have a problem.');
+  }
+});
+
 app.all('*', (req, res) => {
   res.render('template');
 });
