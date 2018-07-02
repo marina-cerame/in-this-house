@@ -39,7 +39,7 @@ app.get('/:houseText', (req, res) => {
 
 app.get('/assets/:filePath', (req, res) => {
   try {
-    res.sendFile(__dirname + '/views/' + req.params.filePath);
+    res.sendFile(__dirname + '/public/' + req.params.filePath);
   } catch (error) {
     console.log(error);
     res.statusCode = 501;
