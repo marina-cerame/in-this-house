@@ -15,6 +15,7 @@ app.listen(PORT, () => {
 
 app.get('/andappreciate/:houseText', (req, res) => {
   try {
+    console.log('REQUEST FOR HOUSE: ' + req.params.houseText);
     res.render('index', { houseText: req.params.houseText });
     // res.sendFile('index.html', { root: __dirname + "/public" });
   } catch (error) {
@@ -30,6 +31,7 @@ app.get('/andappreciate', (req, res) => {
 
 app.get('/:houseText', (req, res) => {
   try {
+    console.log('REQUEST FOR HOUSE: ' + req.params.houseText);
     res.render('index', { houseText: req.params.houseText });
     // res.sendFile('index.html', { root: __dirname + "/public" });
   } catch (error) {
