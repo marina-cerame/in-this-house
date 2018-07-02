@@ -6,8 +6,32 @@
 body {
   font-size: 2vmax;
   white-space: pre;
+  height: 100%;
 }
 
 form {
   margin-bottom: 0.5em;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.home {
+  position: absolute;
+  bottom: 15;
+  left: 15;
+}
+
+.home img {
+  height: 30px;
+  width: 30px;
+}
+
+.kofi {
+  position: absolute;
+  right: 15;
+  bottom: 15;
 }
